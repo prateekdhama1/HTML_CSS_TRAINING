@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    :root{
+    --white:#FFF;
+    --black:#000;
+    --dark:#1E1E1E;
+    --gray:rgba(1,1,1,0.6);
+    --lite:rgba(255,255,255,0.6);
+    --primary:#002347;
+    --secondary:#fdc632;
+}
+
+
+/***************************
+            DEFAULT
+****************************/
+body{
+    margin:0;
+    overflow-x:hidden !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration:none !important;
+    min-width: fit-content;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+a, button{
+    transition:0.5s;
+}
+
+a, p{
+    font-size:14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:var(--primary);
+    font-weight:600;
+}
+
+a, button, input, textarea, select{
+    outline:none !important;
+}
+
+fieldset{
+    border:0;
+}
+
+.title{
+    color:var(--primary);
+}
+
+.flex, .fixed_flex{
+    display:flex;
+}
+
+.flex-content{
+    width:100%;
+    position:relative;
+}
+
+.padding_1x{
+    padding:1rem;
+}
+
+.padding_2x{
+    padding:2rem;
+}
+
+.padding_3x{
+    padding:3rem;
+}
+
+.padding_4x{
+    padding:4rem;
+}
+
+.btn{
+    padding:0.8rem 2rem;
+    border-radius:5px;
+    text-align:center;
+    font-weight:500;
+    text-transform:uppercase;
+}
+
+.btn_1{
+    border:1px solid var(--primary);
+    background-color:var(--primary);
+    color:var(--secondary);
+}
+
+.btn_1:hover{
+    background-color:transparent;
+    color:var(--primary);
+}
+
+.btn_2{
+    border:1px solid var(--secondary);
+    background-color:var(--secondary);
+    color:var(--primary);
+}
+
+.btn_2:hover{
+    border:1px solid var(--primary);
+    background-color:var(--primary);
+    color:var(--secondary);
+}
+
+@media (max-width:920px){
+    .flex{
+        flex-wrap:wrap;
+    }
+    
+    .padding_1x, .padding_2x, .padding_3x, .padding_4x{
+        padding:1rem;
+    }
+  
+    .btn{
+        padding:0.5rem 1rem;
+    }
+    
+    a, p{
+        font-size:12px;
+    }
+}
+
+
+
+/***************************
+               FOOTER
+****************************/
+footer{
+    background-color:var(--primary);
+    color:var(--lite);
+}
+
+footer h3{
+    color:var(--white);
+    margin-bottom:1.5rem;
+}
+
+footer a{
+    color:var(--lite);
+    display:block;
+    margin:15px 0;
+}
+
+footer a:hover{
+    color:var(--white);
+}
+
+footer fieldset{
+    padding:0;
+}
+
+footer fieldset input{
+    background-color:#334f6c;
+    border:0;
+    color:var(--lite);
+    padding:1rem;
+}
+
+footer fieldset .btn{
+    border-radius:0;
+    border:0;
+}
+
+footer fieldset .btn_2:hover{
+    background-color:var(--secondary);
+    border:0;
+    color:var(--primary);
+}
+
+footer .flex:last-child{
+    align-items:center;
+}
+
+footer .flex:last-child .flex-content:last-child{
+    text-align:right;
+}
+
+footer .flex:last-child p{
+    color:var(--white);
+}
+
+footer .flex:last-child a{
+    width:40px;
+    display:inline-block;
+    background-color:#334f6c;
+    color:var(--white);
+    padding:0.5rem;
+    margin-right:3px;
+    text-align:center;
+}
+
+footer .flex:last-child a:hover{
+    background-color:var(--secondary);
+    color:var(--gray);
+}
+
+@media (max-width:1100px){
+    footer .flex:first-child{
+        flex-wrap:wrap;
+    }
+    
+    footer .flex:first-child .flex-content{
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width:920px){
+    footer .flex:last-child .flex-content:last-child{
+        text-align:left;
+    }
+}
+
+@media (max-width:320px){
+    footer .flex:first-child .flex-content{
+        flex:1 1 100%;
+    }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+<!--footer-->
+<footer class="padding_4x">
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <h3>Top Products</h3>
+      <a href="#">Managed Website</a>
+      <a href="#">Manage Reputation</a>
+      <a href="#">Power Tools</a>
+      <a href="#">Marketing Service</a>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Quick Links</h3>
+      <a href="#">Jobs</a>
+      <a href="#">Brand Assets</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Terms of Service</a>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Features</h3>
+      <a href="#">Jobs</a>
+      <a href="#">Brand Assets</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Terms of Service</a>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Resources</h3>
+      <a href="#">Guides</a>
+      <a href="#">Research</a>
+      <a href="#">Experts</a>
+      <a href="#">Agencies</a>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Newsletter</h3>
+      <p>You can trust us. we only send promo offers,</p>
+      <fieldset class="fixed_flex">
+        <input type="email" name="newsletter" placeholder="Your Email Address">
+        <button class="btn btn_2">Subscribe</button>
+      </fieldset>
+    </section>
+  </div>
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <p>Copyright ©2023 All rights reserved || website name</p>
+    </section>
+    <section class="flex-content padding_1x">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </section>
+  </div>
+</footer>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Document</title>
+
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        }
+
+
+
+
+
+        footer{
+        color: #fff;
+        background-image: linear-gradient(90deg, rgba(39,27,111,1) 0%, rgba(87,25,45,1) 100%);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 70px;
+        font-size: 0.8rem;
+        }
+
+
+
+        @media (max-width:960px) {
+        footer{
+            width: 100%;
+            top: 120px;
+        }
+        
+        .main{
+        margin: 50px;
+        display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
+        
+        .logo{
+            grid-column: 1/3;
+        }
+        
+        .office{
+            grid-column: 3/5;
+        }
+        .link{
+            grid-column: 1/3;
+        }
+        
+            
+        }
+
+
+
+
+
+    @media (max-width:660px){
+    .main{
+        gap:10px;
+        margin: 0;
+
+    }
+    
+    .icons{
+        display: flex;
+    }
+    
+    
+    
+    .row{
+        grid-column: 1/4;
+    }
+    }
+
+
+
+
+
+
+
+    .manik{
+    width: 120px;
+    }
+    .main{
+    margin: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr );
+    }
+    .row{
+    margin-top: 50px;
+    }
+    .footer-header{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    }
+
+    .office-des{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .office a{
+    text-decoration: none;
+    color: #98A8F8;
+    
+    }
+    .office a:hover{
+    color: #fff;
+    }
+    .num{
+    font-size: 1rem;
+    font-weight: 500;
+    }
+
+    .link-des{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    }
+    .link-des a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    }
+
+    .link-des a:hover{
+    color: #FB2576;
+    transition: linear 0.3s;
+    }
+
+    .btn-know{
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    background-color: transparent;
+    border: 1px solid #98A8F8;
+    color: #98A8F8;
+    text-transform: uppercase;
+    border-radius:10px;
+    
+    }
+
+
+    .btn-know:hover{
+    color: white; 
+    background-color: #98A8F8;
+    transition: linear 0.3s;
+    }
+    .subcribe{
+    display: flex;
+    }
+    input[type=mail]{
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    font-size: 0.8rem;
+    }
+    .sub-icon{
+    margin: 7px;
+    margin-right: 15px;
+    margin-left: 0;
+    font-size: 1.5rem;
+    }
+    .ri-arrow-right-line{
+    margin-left: 0;
+    
+    }
+
+    .icons a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 2%;
+    }
+
+
+    .social-icon{
+    position: relative;
+    top:2px;
+    }
+    .icons a:hover{
+    color: #fff;
+    background-color: #FB2576;
+    border-color: #FB2576;
+    }
+    .newsletter-des{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    }
+
+    .copyright{
+    text-align: center;
+    }
+
+    hr{
+    width: 90%;
+    margin: 2px auto;
+    opacity: 40%;
+    border: 0.01px solid white;
+    
+    }
+
+    .copyright p{
+    padding: 20px;
+    }
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <main class="main-section">
+    
+  </main>
+  
+  <footer class="footer-sec">
+    <div class="main">
+      
+      
+      <div class="logo row">
+        <div class="footer-header">
+          <img src="https://i.postimg.cc/tgk8X2w7/manik-low-resolution-logo-white-on-transparent-background.png" class="manik" alt="">
+        </div>
+        <div class="logo-des">
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+          
+          <a href="#" class="btn-know">Know More</a>
+        </div>
+        
+        
+      </div>
+      
+      
+      
+      <div class="office row">
+        <div class="footer-header">
+          <h3>Office</h3>
+        </div>
+        <div class="office-des">
+          <p>here are <br> many variations of passages<br>of Lorem Ipsum<br>available</p>
+          
+         <a href="#">manikmaity.haker2003@gmail.com</a>
+          
+          <p class = "num">+91-9999999999</p>
+        </div>
+      </div>
+      
+      
+      <div class="link row">
+        <div class="footer-header">
+          <h3>Links</h3>
+        </div>
+        
+        <div class="link-des">
+          <a href="#" class="footer-links">Home</a>
+          <a href="#" class="footer-links">About</a>
+          <a href="#" class="footer-links">Services</a>
+          <a href="#" class="footer-links">Galary</a>
+          <a href="#" class="footer-links">Contact</a>
+        </div>
+        
+      </div>
+      
+      
+      <div class="newsletter row">
+        <div class="footer-header">
+          <h3>Newsletter</h3>
+        </div>
+        <div class="newsletter-des">
+          <div class="subcribe"><i class="sub-icon ri-mail-check-fill"></i>
+            <input type="mail" placeholder = "Enter Email ID" required>
+            <i class="sub-icon ri-arrow-right-line"></i>
+          </div>
+          <div class="icons">
+            <a href="#"><i class="social-icon ri-facebook-fill"></i></a>
+            <a href="#"><i class="social-icon ri-instagram-line"></i></a>
+            <a href="#"><i class="social-icon ri-linkedin-fill"></i></a>
+            <a href="#"><i class="social-icon ri-github-line"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="copyright">
+    <hr>
+    
+    <p>© Copyright 2022 Manik Maity.</p>
+    </div>
+  </footer>
+</body>
+</html> -->

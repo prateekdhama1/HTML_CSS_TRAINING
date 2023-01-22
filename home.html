@@ -5,11 +5,295 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        p{
+            font-weight: 300;
+            font-size: 20px;
+        }
+        @keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-webkit-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-moz-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+@-o-keyframes down-btn {
+    0% { bottom:20px; }    
+    100% { bottom:0px; }
+
+    0% { opacity:0; }    
+    100% { opaicty:1; }
+}
+
+body {
+    margin:0;
+}
+
+.category-name {
+    font-family: sans-serif;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size: 40px;
+}
+
+.card-category-2 ul, .card-category-3 ul, .card-category-4 ul, .card-category-5 ul  .card-category-6 ul {
+    padding: 0;
+}
+    
+.card-category-2 ul li, .card-category-3 ul li, .card-category-4 ul li, .card-category-5 ul li, .card-category-6 ul li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-category-2 ul li, .card-category-3 ul li {
+    margin: 10px 5px;
+}
+
+.card-category-1, .card-category-2, .card-category-3, .card-category-4, .card-category-5, .card-category-6 {
+    font-family: sans-serif;
+    margin-bottom: 45px;
+    text-align: center;
+}
+    .card-category-1 div, .card-category-2 div {
+        display:inline-block;
+    }
+
+    .card-category-1 > div, .card-category-2 > div:not(:last-child) {
+        margin: 10px 5px;
+        text-align: left;
+    }
+
+    /* Basic Card */
+    .basic-card {
+        width:300px;
+        position: relative;
+        
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    }
+    
+        .basic-card .card-content {
+            padding: 30px;
+        }
+
+        .basic-card .card-title {
+            font-size: 25px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .basic-card .card-text {
+            line-height: 1.6;
+        }
+
+        .basic-card .card-link {
+            padding: 25px;
+            width: -webkit-fill-available;
+        }
+
+            .basic-card .card-link a {
+                text-decoration: none;
+                position: relative;
+                padding: 10px 0px;
+            }
+
+            .basic-card .card-link a:after {
+                top: 30px;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                width: 0;
+
+                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            }
+
+            .basic-card .card-link a:hover:after { 
+                width: 100%; 
+                left: 0; 
+            }
+    
+    
+    .basic-card-aqua {
+        background-image: linear-gradient(to bottom right, #00bfad, #99a3d4);
+    }
+
+        .basic-card-aqua .card-content, .basic-card .card-link a {
+            color: #fff;
+        }
+        
+        .basic-card-aqua .card-link {
+            border-top:1px solid #82c1bb;
+        }
+
+            .basic-card-aqua .card-link a:after {
+                background:#fff;
+            }
+
+    .basic-card-lips {
+        background-image: linear-gradient(to bottom right, #ec407b, #ff7d94);
+    }
+
+        .basic-card-lips .card-content {
+            color: #fff;
+        }
+
+        .basic-card-lips .card-link {
+            border-top: 1px solid #ff97ba;
+        }
+
+            .basic-card-lips .card-link a:after {
+                background:#fff;
+            }
+    
+    .basic-card-light {
+        border: 1px solid #eee;
+    }
+
+        .basic-card-light .card-title, .basic-card-light .card-link a {
+            color: #636363;
+        }
+        
+        .basic-card-light .card-text {
+            color: #7b7b7b;
+        }
+
+        .basic-card-light .card-link {
+            border-top: 1px solid #eee;
+        }
+
+            .basic-card-light .card-link a:after {
+                background:#636363;
+            }
+
+    .basic-card-dark {
+        background-image: linear-gradient(to bottom right, #252525, #4a4a4a);
+    }
+
+        .basic-card-dark .card-title, .basic-card-dark .card-link a {
+            color:#eee;
+        }
+
+        .basic-card-dark .card-text {
+            color: #dcdcdcdd;
+        }
+
+        .basic-card-dark .card-link {
+            border-top: 1px solid #636363;
+        }
+
+        .basic-card-dark .card-link a:after {
+            background:#eee;
+        }
+    </style>
 </head>
 <body>
-    <section id="Home" >
-        <H2>HOME PAGE</H2>
-        <p>HERE IS SOME INFORMTION REGARDING HOME PAGE</p>
-    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h2 class="mt-3">WHAT IS LIVE VIRTUAL CLASS?</h2>
+                <br>
+                <p>
+                    A Live Virtual Classroom is a platform for delivering a trainer-led, interactive course in an online environment. They are designed to replicate the experience and benefit of attending a face-to-face training course, with the same discussion, group breakout work, questions and answers, and access to a responsive, knowledgeable expert.
+                </p>
+                <br>
+                <h3> Advantages of LVC training over traditional class-based training include:</h3>
+
+                <ul>
+                    <li>
+                        Flexibility of allowing globally distributed teams to access training
+                    </li>
+                    <li>
+                        Reduced costs and time lost due to travel
+                    </li>
+                    <li>
+                        Supports corporate social responsibility initiatives by reducing carbon emissions
+                    </li>
+                </ul>
+                <br>
+                <h3>How do LVC courses compare to other forms of online learning?</h3>
+                <br>
+                <p>Online training courses are pre-recorded or packaged up collections of video, exercises, written material and other content. Learners work through the material in their own time, usually without access to direct support.
+                    Webinars are broadcast-style events where a live presenter gives a talk to a large audience, with audience interaction typically limited to text-based questions at the end of the session.
+                    Distance learning courses allow learners to follow a programme of training over many weeks or months, working through pre-prepared content, completing assignments, receiving feedback from an instructor, and often leading to an academic qualification.
+                    Live Virtual Classrooms are interactive online training events where a live trainer engages with a small class over one or two days. Learners all have the opportunity to be active participants in the session and take part in real-time discussions and breakout exercises.</p>
+                <br>
+                <h3>How does the LVC teaching compare to classroom teaching?</h3>
+                <br>
+                <p>While teaching in a virtual classroom, trainers seek to preserve the benefits traditional classroom training by regularly interacting with the group, encouraging questions, and presenting with full video. To mitigate disengagement and loss of concentration, these additional practices are used:
+
+                    Additional visual cues such as annotations while presenting, to stimulate multiple senses
+                    Regularly switching between lecture, discussion, and breakout exercises, with regular breaks, to keep engagement high
+                    There are also some advantages to LVC training, especially in fully distributed configurations where all participants join on their own equipment. This setup opens up the possibility of collaborating in online tools such as interactive boards, whiteboards, and applications. Learners can collaborate to build things in ways that are less practical in a physical room, huddled around a laptop or flipchart.</p>
+
+
+                   
+
+                    
+                    
+                    
+                    
+                    
+            </div>
+            <div class="col-3">
+            
+                <div class="card-category-1">
+                    
+                    <div class="basic-card basic-card-aqua">
+                        <div class="card-content">
+                            <span class="card-title"> ANGULAR </span>
+                            <p class="card-text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="basic-card basic-card-lips">
+                        <div class="card-content">
+                            <span class="card-title">EXPRESS</span>
+                            <p class="card-text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
